@@ -1,7 +1,7 @@
 %define name perl-Flickr-API
 %define pkgname Flickr-API
 %define version 0.08
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Perl interface to the flickr.com API 
 Name:		%{name}
@@ -29,6 +29,8 @@ Perl interface to the flickr.com API
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 make
+
+%check
 make test
 
 %install
