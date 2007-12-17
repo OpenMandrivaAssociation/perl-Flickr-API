@@ -17,7 +17,6 @@ BuildRequires:  perl-libwww-perl
 Buildrequires: perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
 Requires:	perl
 
 %description
