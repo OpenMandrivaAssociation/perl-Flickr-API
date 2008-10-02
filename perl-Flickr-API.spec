@@ -1,7 +1,7 @@
 %define name perl-Flickr-API
 %define pkgname Flickr-API
-%define version 0.09
-%define release %mkrel 3
+%define version 1.01
+%define release %mkrel 1
 
 Summary:	Perl interface to the flickr.com API 
 Name:		%{name}
@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/I/IA/IAMCAL/%{pkgname}-%{version}.tar.bz2
+Source:		http://search.cpan.org/CPAN/authors/id/I/IA/IAMCAL/%{pkgname}-%{version}.tar.gz
 Url:		http://search.cpan.org/dist/%{pkgname}/
 BuildRequires:  perl-XML-Parser-Lite-Tree
 BuildRequires:  perl-libwww-perl
