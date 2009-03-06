@@ -1,7 +1,7 @@
 %define name perl-Flickr-API
 %define pkgname Flickr-API
 %define version 1.01
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Perl interface to the flickr.com API 
 Name:		%{name}
