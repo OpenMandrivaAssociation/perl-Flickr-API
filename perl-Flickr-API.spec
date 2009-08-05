@@ -1,30 +1,29 @@
-%define name perl-Flickr-API
-%define pkgname Flickr-API
-%define version 1.01
-%define release %mkrel 2
+%define upstream_name    Flickr-API
+%define upstream_version 1.02
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl interface to the flickr.com API 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/I/IA/IAMCAL/%{pkgname}-%{version}.tar.gz
-Url:		http://search.cpan.org/dist/%{pkgname}/
-BuildRequires:  perl-XML-Parser-Lite-Tree
-BuildRequires:  perl-libwww-perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/I/IA/IAMCAL/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 Buildrequires: perl-devel
 %endif
+BuildRequires:  perl-libwww-perl
+BuildRequires:  perl-XML-Parser-Lite-Tree
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	perl
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl interface to the flickr.com API
 
 %prep
-%setup -q -n %{pkgname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -45,4 +44,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README 
 %{perl_vendorlib}/
 %{_mandir}/*/*
-
