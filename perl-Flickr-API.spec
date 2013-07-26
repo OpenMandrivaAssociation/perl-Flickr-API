@@ -1,15 +1,15 @@
 %define upstream_name    Flickr-API
-%define upstream_version 1.04
+%define upstream_version 1.08
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 1.08
+Release:	1
 
 Summary:	Perl interface to the flickr.com API 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/I/IA/IAMCAL/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/authors/id/I/IA/IAMCAL/Flickr-API-1.08.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-libwww-perl
@@ -93,4 +93,5 @@ make test
 
 * Wed Aug 31 2005 Pascal Terjan <pterjan@mandriva.org> 0.07-1mdk
 - First version of the package
+
 
